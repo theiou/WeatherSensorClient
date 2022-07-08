@@ -5,14 +5,16 @@ import java.time.LocalDateTime;
 public class Weather {
     private double value;
     private String raining;
+    private LocalDateTime createdAt;
     private Sensor sensor;
 
     public Weather() {
     }
 
-    public Weather(double value, String raining, Sensor sensor) {
+    public Weather(double value, String raining, LocalDateTime createdAt, Sensor sensor) {
         this.value = value;
         this.raining = raining;
+        this.createdAt = createdAt;
         this.sensor = sensor;
     }
 
@@ -38,5 +40,13 @@ public class Weather {
 
     public void setSensor(Sensor sensor) {
         this.sensor = sensor;
+    }
+
+    public LocalDateTime getCreatedAt() {
+        return createdAt;
+    }
+
+    public void setCreatedAt(LocalDateTime createdAt) {
+        this.createdAt = createdAt;
     }
 }
